@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+
 // Route::controller(PostController::class)->group(function() {
 //     Route::get('/', 'home')->name('home');
 //     Route::get('/blog', 'blog')->name('blog');
@@ -21,6 +22,6 @@ use Illuminate\Support\Facades\Route;
 
 // });
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});

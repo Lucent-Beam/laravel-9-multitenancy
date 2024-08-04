@@ -1,6 +1,6 @@
 <?php
  
-namespace App;
+namespace App\Models;
  
 use Stancl\Tenancy\Database\Models\Tenant as BaseTenant;
 use Stancl\Tenancy\Contracts\TenantWithDatabase;
