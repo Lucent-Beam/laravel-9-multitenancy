@@ -24,6 +24,10 @@ Route::middleware([
     PreventAccessFromCentralDomains::class,
 ])->group(function () {
     Route::get('/', function () {
+        
+        // DB::table('posts')
+        //     ->insert(['user_id' => 1, 'title' => "post de ".tenant('id'), 'slug' => 'wdadawda'.tenant('id'), 'body' => 'lorem ipsum etc'.tenant('id')]);
+
         return 'This is your multi-tenant application. The id of the current tenant is ' . tenant('id');
     });
 });
