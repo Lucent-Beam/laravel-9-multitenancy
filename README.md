@@ -64,3 +64,24 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+-----------
+
+LARAVEL MULTITENANCY 
+
+RUN WITH PHP ARTISAN TINKER
+
+STEP 1
+	
+	*creating db's (it's automatically due the package ) for every tenant
+    >> $tenant1 = Tenant::create(['id' => 'example-tenant']);
+    >> $tenant1->domains()->create(['domain' => 'example-tenant.test']);
+
+    >> $tenant2 = Tenant::create(['id' => 'luyz-tenant']);
+    >> $tenant2->domains()->create(['domain' => 'luyz-tenant.test']);
+
+STEP 2
+
+App\Tenant::all()->runForEach(function () {
+     \App\Models\User::factory(10)->create();
+});
