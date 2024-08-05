@@ -85,3 +85,6 @@ STEP 2
 App\Tenant::all()->runForEach(function () {
      \App\Models\User::factory(10)->create();
 });
+
+
+https://laravel-news.com/multi-tenant
